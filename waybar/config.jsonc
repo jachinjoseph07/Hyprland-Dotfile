@@ -28,7 +28,7 @@
     "format": "{icon}",
     "on-click": "activate",
     "persistent-workspaces": {
-    "*":[1,2,3,4,5,6,7,8,9]
+      "*": [1, 2, 3, 4, 5, 6, 7, 8, 9]
     },
     "format-icons": {
       "1": "󰣇",
@@ -44,22 +44,22 @@
     }
   },
   "custom/lock": {
-  "format": "<span color='#00FFFF'>  </span>",
-  "on-click": "hyprlock",
-  "tooltip": true,
-  "tooltip-format": "锁屏"
+    "format": "<span color='#00FFFF'>  </span>",
+    "on-click": "hyprlock",
+    "tooltip": true,
+    "tooltip-format": "Lock screen"
   },
   "custom/reboot": {
     "format": "<span color='#FFD700'>  </span>",
     "on-click": "systemctl reboot",
     "tooltip": true,
-    "tooltip-format": "重启"
+    "tooltip-format": "Reboot"
   },
   "custom/power": {
     "format": "<span color='#FF4040'>  </span>",
     "on-click": "systemctl poweroff",
     "tooltip": true,
-    "tooltip-format": "关机"
+    "tooltip-format": "Power off"
   },
   "network": {
     "format-wifi": "<span color='#00FFFF'> 󰤨 </span>{essid} ",
@@ -77,7 +77,7 @@
     },
     "format": "<span color='#28CD41'> {icon} </span>{capacity}% ",
     "format-charging": " 󱐋{capacity}%",
-	  "interval": 1,
+    "interval": 1,
     "format-icons": ["󰂎", "󰁼", "󰁿", "󰂁", "󰁹"],
     "tooltip": true
   },
@@ -100,19 +100,19 @@
     "on-click-right": "pavucontrol -t 3",
     "on-click": "pactl -- set-sink-mute 0 toggle",
     "tooltip": true,
-    "tooltip-format": "当前系统声音: {volume}%"
+    "tooltip-format": "Current system volume: {volume}%"
   },
   "custom/temperature": {
     "exec": "sensors | awk '/^Package id 0:/ {print int($4)}'",
     "format": "<span color='#FFA500'> </span>{}°C ",
     "interval": 5,
     "tooltip": true,
-    "tooltip-format": "当前 CPU 温度: {}°C"
+    "tooltip-format": "Current CPU temperature: {}°C"
   },
   "memory": {
     "format": "<span color='#8A2BE2'>  </span>{used:0.1f}G/{total:0.1f}G ",
     "tooltip": true,
-    "tooltip-format": "当前内存占比: {used:0.2f}G/{total:0.2f}G"
+    "tooltip-format": "Current memory usage: {used:0.2f}G/{total:0.2f}G"
   },
   "cpu": {
     "format": "<span color='#FF9F0A'>  </span>{usage}% ",
@@ -123,7 +123,7 @@
     "timezone": "Asia/Chengdu",
     "format": "<span color='#BF00FF'>  </span>{:%H:%M} ",
     "tooltip": true,
-    "tooltip-format": "{:L%Y 年 %m 月 %d 日, %A}"
+    "tooltip-format": "{:L%Y-%m-%d, %A}"
   },
   "tray": {
     "icon-size": 17,
@@ -133,12 +133,12 @@
     "device": "intel_backlight",
     "format": "<span color='#FFD700'>{icon}</span>{percent}% ",
     "tooltip": true,
-    "tooltip-format": "当前屏幕亮度: {percent}%",
+    "tooltip-format": "Current screen brightness: {percent}%",
     "format-icons": [
-      "<span color='#696969'> 󰃞 </span>",  // 暗 - 深灰
-      "<span color='#A9A9A9'> 󰃝 </span>",  // 中 - 灰
-      "<span color='#FFFF66'> 󰃟 </span>",  // 亮 - 柠檬黄
-      "<span color='#FFD700'> 󰃠 </span>"   // 最亮 - 金色
+      "<span color='#696969'> 󰃞 </span>",  // Dark - Dark Gray
+      "<span color='#A9A9A9'> 󰃝 </span>",  // Medium - Gray
+      "<span color='#FFFF66'> 󰃟 </span>",  // Bright - Lemon Yellow
+      "<span color='#FFD700'> 󰃠 </span>"   // Brightest - Gold
     ]
   },
   "bluetooth": {
@@ -150,15 +150,15 @@
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
   },
-"power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-        "default": "󱐋",
-        "performance": "󱐋",
-        "balanced": "󰗑",
-        "power-saver": "󰌪"
-      },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "󱐋",
+      "performance": "󱐋",
+      "balanced": "󰗑",
+      "power-saver": "󰌪"
+    }
   }
 }
