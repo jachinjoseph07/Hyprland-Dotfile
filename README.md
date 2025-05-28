@@ -1,0 +1,9 @@
+INSTALL
+sudo=
+waybar
+rofi-wayland
+yay=
+*hypridle
+*hyprpaper
+*hyprlock
+*swaync
